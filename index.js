@@ -18,10 +18,11 @@ app.use(express.static('dist'))
 
 io.on('connection', function (socket) {
   console.log('user connected', socket.id)
+  color = color.rotate(30).darken(0.1)
 
   io.to(socket.id).emit('chat login', {
     userId: ++uid,
-    userColor: color.rotate(30).darken(0.3).hex()
+    userColor: color.hex()
   })
 
   io.to(socket.id).emit('chat message', {
