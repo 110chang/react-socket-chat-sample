@@ -4,7 +4,8 @@
   "description": "This is a socket.io sample",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
   "author": "Yuji Ito",
   "license": "MIT",
@@ -16,7 +17,6 @@
     "color": "^3.0.0",
     "express": "^4.16.3",
     "gulp": "^3.9.0",
-    "gulp-live-server": "0.0.29",
     "react": "^0.14.6",
     "react-dom": "^0.14.6",
     "socket.io": "^2.1.0",
