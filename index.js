@@ -14,7 +14,7 @@ var commentId = 0;
 var users = [];
 var color = Color('#F00');
 
-app.use(express.static('dest'));
+app.use(express.static('dist'));
 
 io.on('connection', function(socket){
   console.log('user connected', socket.id);
@@ -27,8 +27,8 @@ io.on('connection', function(socket){
   io.to(socket.id).emit('chat message', {
     type: 'system',
     color: '#666',
-    text: '#sys ' + uid + '番さんこんにちは！', 
-    _id: commentId++, 
+    text: '#sys ' + uid + '番さんこんにちは！',
+    _id: commentId++,
     createdOn: Date.now()
   });
 

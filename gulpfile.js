@@ -9,12 +9,12 @@ var browsersync = require('browser-sync');
 
 gulp.task('concat', function() {
   browserify({
-    entries: ['./src/main.js'],
+    entries: ['./src/index.js'],
     debug : !gulp.env.production
   }).transform(babelify, { presets: ['react'] })
     .bundle()
     .pipe(source('bundle.js'))
-    .pipe(gulp.dest('./dest'))
+    .pipe(gulp.dest('./dist'))
     .pipe(browsersync.stream());
 });
 
