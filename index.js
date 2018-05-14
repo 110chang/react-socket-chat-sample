@@ -21,7 +21,7 @@ io.on('connection', function(socket){
 
   io.to(socket.id).emit('chat login', {
     userId: ++uid,
-    userColor: color.rotate(30).clone().darken(0.3).hexString()
+    userColor: color.rotate(30).darken(0.3).hex()
   });
 
   io.to(socket.id).emit('chat message', {
