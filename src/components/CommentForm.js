@@ -24,14 +24,18 @@ class CommentForm extends Component {
   }
   render() {
     return (
-      <form className="commentForm" onSubmit={this.handleSubmit}>
-        <input
-          type="text"
-          placeholder="Say something..."
-          value={this.state.text}
-          onChange={this.handleTextChange}
-        />
-        <button>Send</button>
+      <form className="fixed-bottom bg-dark text-white px-3 py-2" onSubmit={this.handleSubmit}>
+        <div className="input-group input-group-lg">
+          <input type="text"
+            className="form-control"
+            placeholder="Say something..."
+            value={this.state.text}
+            onChange={this.handleTextChange}
+          />
+          <div className="input-group-append">
+            <button className="btn btn-secondary">Send</button>
+          </div>
+        </div>
       </form>
     )
   }

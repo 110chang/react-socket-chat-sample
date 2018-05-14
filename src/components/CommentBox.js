@@ -38,8 +38,8 @@ class CommentBox extends Component {
   }
   render() {
     return (
-      <div className="commentBox">
-        <h1>React / socket.io chat sample</h1>
+      <div className="container">
+        <h1 className="display-4">React / socket.io chat sample</h1>
         <CommentList data={this.state.data} />
         <CommentForm onCommentSubmit={this.handleCommentSubmit} />
       </div>
